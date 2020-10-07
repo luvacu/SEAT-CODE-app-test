@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,6 +11,17 @@
 		A030AEB8252E2D5700487696 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A030AEB7252E2D5700487696 /* Assets.xcassets */; };
 		A030AEBB252E2D5700487696 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A030AEB9252E2D5700487696 /* LaunchScreen.storyboard */; };
 		A030AEC6252E2D5700487696 /* SEATCodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A030AEC5252E2D5700487696 /* SEATCodeTests.swift */; };
+		A030AEF6252E355700487696 /* AppFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A030AEF5252E355700487696 /* AppFlowController.swift */; };
+		A030AEFB252E35A600487696 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = A030AEFA252E35A600487696 /* Swinject */; };
+		A030AF00252E35FA00487696 /* UIViewController+Child.swift in Sources */ = {isa = PBXBuildFile; fileRef = A030AEFF252E35FA00487696 /* UIViewController+Child.swift */; };
+		A030AF07252E369200487696 /* DependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A030AF06252E369200487696 /* DependencyContainer.swift */; };
+		A030AF0B252E378500487696 /* TripsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A030AF0A252E378500487696 /* TripsViewModel.swift */; };
+		A030AF0F252E37DC00487696 /* TripsViewModelApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = A030AF0E252E37DC00487696 /* TripsViewModelApi.swift */; };
+		A030AF13252E37FA00487696 /* TripsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A030AF12252E37FA00487696 /* TripsViewController.storyboard */; };
+		A030AF17252E381600487696 /* TripsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A030AF16252E381600487696 /* TripsViewController.swift */; };
+		A030AF26252E3D0A00487696 /* Mock.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = A030AF25252E3D0A00487696 /* Mock.generated.swift */; };
+		A030AF3F252E3EDF00487696 /* SwiftyMocky in Frameworks */ = {isa = PBXBuildFile; productRef = A030AF3E252E3EDF00487696 /* SwiftyMocky */; };
+		A030AF81252E4A0100487696 /* UIViewController+MakeFromStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A030AF80252E4A0100487696 /* UIViewController+MakeFromStoryboard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +43,15 @@
 		A030AEC1252E2D5700487696 /* SEATCodeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SEATCodeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A030AEC5252E2D5700487696 /* SEATCodeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SEATCodeTests.swift; sourceTree = "<group>"; };
 		A030AEC7252E2D5700487696 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A030AEF5252E355700487696 /* AppFlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlowController.swift; sourceTree = "<group>"; };
+		A030AEFF252E35FA00487696 /* UIViewController+Child.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Child.swift"; sourceTree = "<group>"; };
+		A030AF06252E369200487696 /* DependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyContainer.swift; sourceTree = "<group>"; };
+		A030AF0A252E378500487696 /* TripsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsViewModel.swift; sourceTree = "<group>"; };
+		A030AF0E252E37DC00487696 /* TripsViewModelApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsViewModelApi.swift; sourceTree = "<group>"; };
+		A030AF12252E37FA00487696 /* TripsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TripsViewController.storyboard; sourceTree = "<group>"; };
+		A030AF16252E381600487696 /* TripsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsViewController.swift; sourceTree = "<group>"; };
+		A030AF25252E3D0A00487696 /* Mock.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mock.generated.swift; sourceTree = "<group>"; };
+		A030AF80252E4A0100487696 /* UIViewController+MakeFromStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+MakeFromStoryboard.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A030AEFB252E35A600487696 /* Swinject in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A030AF3F252E3EDF00487696 /* SwiftyMocky in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,6 +80,7 @@
 				A030AEAD252E2D5500487696 /* SEATCode */,
 				A030AEC4252E2D5700487696 /* SEATCodeTests */,
 				A030AEAC252E2D5500487696 /* Products */,
+				A030AF34252E3E9000487696 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -91,7 +114,10 @@
 		A030AEE3252E2E2D00487696 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				A030AEAE252E2D5500487696 /* AppDelegate.swift */,
+				A030AEF1252E34C400487696 /* Application */,
+				A030AEF2252E34CF00487696 /* Extensions */,
+				A030AEF3252E34DD00487696 /* Networking */,
+				A030AEF4252E353500487696 /* Trips */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -117,9 +143,94 @@
 		A030AEEC252E2E6400487696 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				A030AF24252E3D0A00487696 /* Mocks */,
 				A030AEC5252E2D5700487696 /* SEATCodeTests.swift */,
 			);
 			path = Sources;
+			sourceTree = "<group>";
+		};
+		A030AEF1252E34C400487696 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				A030AEAE252E2D5500487696 /* AppDelegate.swift */,
+				A030AEF5252E355700487696 /* AppFlowController.swift */,
+				A030AF06252E369200487696 /* DependencyContainer.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		A030AEF2252E34CF00487696 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A030AEFE252E35ED00487696 /* UIKit */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A030AEF3252E34DD00487696 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		A030AEF4252E353500487696 /* Trips */ = {
+			isa = PBXGroup;
+			children = (
+				A030AF03252E361F00487696 /* Data */,
+				A030AF04252E362400487696 /* Domain */,
+				A030AF05252E362900487696 /* Presentation */,
+			);
+			path = Trips;
+			sourceTree = "<group>";
+		};
+		A030AEFE252E35ED00487696 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				A030AEFF252E35FA00487696 /* UIViewController+Child.swift */,
+				A030AF80252E4A0100487696 /* UIViewController+MakeFromStoryboard.swift */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		A030AF03252E361F00487696 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		A030AF04252E362400487696 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		A030AF05252E362900487696 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				A030AF0A252E378500487696 /* TripsViewModel.swift */,
+				A030AF0E252E37DC00487696 /* TripsViewModelApi.swift */,
+				A030AF16252E381600487696 /* TripsViewController.swift */,
+				A030AF12252E37FA00487696 /* TripsViewController.storyboard */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		A030AF24252E3D0A00487696 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				A030AF25252E3D0A00487696 /* Mock.generated.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		A030AF34252E3E9000487696 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +249,9 @@
 			dependencies = (
 			);
 			name = SEATCode;
+			packageProductDependencies = (
+				A030AEFA252E35A600487696 /* Swinject */,
+			);
 			productName = SEATCode;
 			productReference = A030AEAB252E2D5500487696 /* SEATCode.app */;
 			productType = "com.apple.product-type.application";
@@ -146,6 +260,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A030AED8252E2D5700487696 /* Build configuration list for PBXNativeTarget "SEATCodeTests" */;
 			buildPhases = (
+				A030AF21252E393C00487696 /* Build mocks */,
 				A030AEBD252E2D5700487696 /* Sources */,
 				A030AEBE252E2D5700487696 /* Frameworks */,
 				A030AEBF252E2D5700487696 /* Resources */,
@@ -156,6 +271,9 @@
 				A030AEC3252E2D5700487696 /* PBXTargetDependency */,
 			);
 			name = SEATCodeTests;
+			packageProductDependencies = (
+				A030AF3E252E3EDF00487696 /* SwiftyMocky */,
+			);
 			productName = SEATCodeTests;
 			productReference = A030AEC1252E2D5700487696 /* SEATCodeTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -187,6 +305,10 @@
 				Base,
 			);
 			mainGroup = A030AEA2252E2D5500487696;
+			packageReferences = (
+				A030AEF9252E35A600487696 /* XCRemoteSwiftPackageReference "Swinject" */,
+				A030AF3D252E3EDF00487696 /* XCRemoteSwiftPackageReference "SwiftyMocky" */,
+			);
 			productRefGroup = A030AEAC252E2D5500487696 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -203,6 +325,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A030AEBB252E2D5700487696 /* LaunchScreen.storyboard in Resources */,
+				A030AF13252E37FA00487696 /* TripsViewController.storyboard in Resources */,
 				A030AEB8252E2D5700487696 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -216,12 +339,40 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		A030AF21252E393C00487696 /* Build mocks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Build mocks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "swiftymocky generate\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A030AEA7252E2D5500487696 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A030AF17252E381600487696 /* TripsViewController.swift in Sources */,
+				A030AF0B252E378500487696 /* TripsViewModel.swift in Sources */,
 				A030AEAF252E2D5500487696 /* AppDelegate.swift in Sources */,
+				A030AF0F252E37DC00487696 /* TripsViewModelApi.swift in Sources */,
+				A030AEF6252E355700487696 /* AppFlowController.swift in Sources */,
+				A030AF07252E369200487696 /* DependencyContainer.swift in Sources */,
+				A030AF00252E35FA00487696 /* UIViewController+Child.swift in Sources */,
+				A030AF81252E4A0100487696 /* UIViewController+MakeFromStoryboard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -229,6 +380,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A030AF26252E3D0A00487696 /* Mock.generated.swift in Sources */,
 				A030AEC6252E2D5700487696 /* SEATCodeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -480,6 +632,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A030AEF9252E35A600487696 /* XCRemoteSwiftPackageReference "Swinject" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swinject/Swinject";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.7.1;
+			};
+		};
+		A030AF3D252E3EDF00487696 /* XCRemoteSwiftPackageReference "SwiftyMocky" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/MakeAWishFoundation/SwiftyMocky";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A030AEFA252E35A600487696 /* Swinject */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A030AEF9252E35A600487696 /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = Swinject;
+		};
+		A030AF3E252E3EDF00487696 /* SwiftyMocky */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A030AF3D252E3EDF00487696 /* XCRemoteSwiftPackageReference "SwiftyMocky" */;
+			productName = SwiftyMocky;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A030AEA3252E2D5500487696 /* Project object */;
 }

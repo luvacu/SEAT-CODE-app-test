@@ -1,0 +1,13 @@
+sourceryCommand: null
+sourceryTemplate: null
+SEATCodeTests:
+  sources:
+    include:
+    - ./SEATCode/Sources
+  output: ./SEATCodeTests/Sources/Mocks/Mock.generated.swift
+  targets:
+  - SEATCodeTests
+  testable:
+  - SEATCode
+  import:
+  - Foundation

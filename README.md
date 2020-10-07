@@ -7,13 +7,18 @@ Trips demo app for iPhone (iOS 14+).
 - iOS 14.0+
 - Swift 5.3
 - Xcode 12.0
+- SwiftyMocky CLI (for running the unit tests only)
 
 ## Installation
 
 - Clone the repo.
 - Open `SEATCode.xcodeproj` and run the app.
+- In order to run the unit tests, please install [SwiftyMocky's CLI](https://github.com/MakeAWishFoundation/SwiftyMocky#installation), so up-to-date mocks are generated.
 
 ## Tools/Libraries/SDKs used
+- Swift Package Manager (already integrated in Xcode 12.0+)
+- [SwiftyMocky](https://github.com/MakeAWishFoundation/SwiftyMocky)
+- [Swinject](https://github.com/Swinject/Swinject)
 
 ## Author
 Luis Valdés Cuesta
