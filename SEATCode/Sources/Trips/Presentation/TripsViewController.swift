@@ -54,6 +54,7 @@ private extension TripsViewController {
                 self?.title = title
             }
             .disposed(by: disposeBag)
+
         viewModel.trips
             .do(onNext: { [weak self] _ in
                 self?.activityIndicator.isHidden = true
@@ -62,14 +63,38 @@ private extension TripsViewController {
                 cell.configure(trip: trip)
             }
             .disposed(by: disposeBag)
+
         tableView.rx.itemSelected
-            .subscribe(onNext: { indexPath in
-                print("selected \(indexPath)")
+            .subscribe(onNext: { [weak self] indexPath in
+                self?.viewModel.selectTripIndex.accept(indexPath.row)
             })
             .disposed(by: disposeBag)
+
+        viewModel.selectedTripMapDetails
+            .drive { [weak self] tripMapDetails in
+                self?.showTripInMap(tripMapDetails)
+            }
+            .disposed(by: disposeBag)
+    }
+
+    func showTripInMap(_ tripMapDetails: TripMapDetails) {
+        mapView.clearAnnotations()
+        mapView.clearOverlays()
+        mapView.showAnnotations([tripMapDetails.origin, tripMapDetails.destination] + tripMapDetails.stops, animated: true)
+        if let polyline = tripMapDetails.route {
+            mapView.addOverlay(polyline, level: .aboveRoads)
+        }
     }
 }
 
 extension TripsViewController: MKMapViewDelegate {
-
+    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
+        guard let polyline = overlay as? MKPolyline else {
+            return MKOverlayRenderer(overlay: overlay)
+        }
+        let renderer = MKPolylineRenderer(polyline: polyline)
+        renderer.strokeColor = .red
+        renderer.lineWidth = 3
+        return renderer
+    }
 }

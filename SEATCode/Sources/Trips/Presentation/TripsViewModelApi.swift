@@ -13,4 +13,6 @@ import RxCocoa
 protocol TripsViewModelApi {
     var title: Driver<String> { get }
     var trips: Driver<[TripDetails]> { get }
+    var selectTripIndex: PublishRelay<Int> { get }
+    var selectedTripMapDetails: Driver<TripMapDetails> { get }
 }
