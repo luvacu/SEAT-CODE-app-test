@@ -11,4 +11,5 @@ import RxSwift
 // sourcery: AutoMockable
 protocol TripsRemoteServiceApi {
     func trips() -> Single<[TripCodable]>
+    func stopDetails(id: Int) -> Single<StopCodable>
 }

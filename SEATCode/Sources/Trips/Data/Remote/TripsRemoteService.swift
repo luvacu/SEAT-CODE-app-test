@@ -35,4 +35,21 @@ extension TripsRemoteService: TripsRemoteServiceApi {
             return Disposables.create()
         }
     }
+
+    func stopDetails(id: Int) -> Single<StopCodable> {
+        .create { observer -> Disposable in
+            self.apiClient.request(.stopDetails(id: id),
+                                   response: StopCodable.self,
+                                   jsonDecoder: jsonDecoder) { result in
+                switch result {
+                case let .success(stop):
+                    observer(.success(stop))
+                    break
+                case let .failure(error):
+                    observer(.error(error))
+                }
+            }
+            return Disposables.create()
+        }
+    }
 }

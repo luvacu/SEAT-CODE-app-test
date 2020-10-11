@@ -10,7 +10,8 @@ import RxSwift
 import RxCocoa
 
 struct TripsViewModel {
-    private let selectTripRelay = PublishRelay<Int>()
+    private let selectedTripRelay = PublishRelay<Int>()
+    private let selectedStopIdRelay = PublishRelay<Int>()
     private let currentTrips = BehaviorRelay<[Trip]>(value: [])
     private let repository: TripsRepositoryApi
 
@@ -36,7 +37,7 @@ extension TripsViewModel: TripsViewModelApi {
     }
 
     var selectedTripMapDetails: Driver<TripMapDetails> {
-        selectTripRelay
+        selectedTripRelay
             .withLatestFrom(currentTrips) { index, trips in
                 trips[index]
             }
@@ -46,7 +47,19 @@ extension TripsViewModel: TripsViewModelApi {
             }
     }
 
-    var selectTripIndex: PublishRelay<Int> {
-        selectTripRelay
+    var selectedStopDetails: Observable<StopDetails> {
+        selectedStopIdRelay
+            .flatMapLatest { stopId in
+                self.repository.stopDetails(id: stopId)
+            }
+            .map { StopDetails(stop: $0) }
+    }
+
+    var didSelectTripIndex: PublishRelay<Int> {
+        selectedTripRelay
+    }
+
+    var didSelectStopId: PublishRelay<Int> {
+        selectedStopIdRelay
     }
 }

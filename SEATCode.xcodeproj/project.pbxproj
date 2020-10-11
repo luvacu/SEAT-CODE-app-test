@@ -34,6 +34,9 @@
 		A019C7DF2533AF51008F7644 /* TripMapDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = A019C7DE2533AF51008F7644 /* TripMapDetails.swift */; };
 		A019C7E42533B01E008F7644 /* MKMapView+ClearAnnotations.swift in Sources */ = {isa = PBXBuildFile; fileRef = A019C7E32533B01E008F7644 /* MKMapView+ClearAnnotations.swift */; };
 		A019C7EA2533B24D008F7644 /* MKMapView+ClearOverlays.swift in Sources */ = {isa = PBXBuildFile; fileRef = A019C7E92533B24D008F7644 /* MKMapView+ClearOverlays.swift */; };
+		A019C7EE2533B80A008F7644 /* Endpoint+StopDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = A019C7ED2533B80A008F7644 /* Endpoint+StopDetails.swift */; };
+		A019C7F22533B85C008F7644 /* StopCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A019C7F12533B85C008F7644 /* StopCodable.swift */; };
+		A019C7F62533B8A7008F7644 /* Stop.swift in Sources */ = {isa = PBXBuildFile; fileRef = A019C7F52533B8A7008F7644 /* Stop.swift */; };
 		A030AEAF252E2D5500487696 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A030AEAE252E2D5500487696 /* AppDelegate.swift */; };
 		A030AEB8252E2D5700487696 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A030AEB7252E2D5700487696 /* Assets.xcassets */; };
 		A030AEBB252E2D5700487696 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A030AEB9252E2D5700487696 /* LaunchScreen.storyboard */; };
@@ -49,6 +52,7 @@
 		A030AF26252E3D0A00487696 /* Mock.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = A030AF25252E3D0A00487696 /* Mock.generated.swift */; };
 		A030AF3F252E3EDF00487696 /* SwiftyMocky in Frameworks */ = {isa = PBXBuildFile; productRef = A030AF3E252E3EDF00487696 /* SwiftyMocky */; };
 		A030AF81252E4A0100487696 /* UIViewController+MakeFromStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A030AF80252E4A0100487696 /* UIViewController+MakeFromStoryboard.swift */; };
+		A09D29992533B9B5001B05C1 /* StopDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09D29982533B9B5001B05C1 /* StopDetails.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +91,9 @@
 		A019C7DE2533AF51008F7644 /* TripMapDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripMapDetails.swift; sourceTree = "<group>"; };
 		A019C7E32533B01E008F7644 /* MKMapView+ClearAnnotations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKMapView+ClearAnnotations.swift"; sourceTree = "<group>"; };
 		A019C7E92533B24D008F7644 /* MKMapView+ClearOverlays.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKMapView+ClearOverlays.swift"; sourceTree = "<group>"; };
+		A019C7ED2533B80A008F7644 /* Endpoint+StopDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Endpoint+StopDetails.swift"; sourceTree = "<group>"; };
+		A019C7F12533B85C008F7644 /* StopCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopCodable.swift; sourceTree = "<group>"; };
+		A019C7F52533B8A7008F7644 /* Stop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stop.swift; sourceTree = "<group>"; };
 		A030AEAB252E2D5500487696 /* SEATCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SEATCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A030AEAE252E2D5500487696 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A030AEB7252E2D5700487696 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -104,6 +111,7 @@
 		A030AF16252E381600487696 /* TripsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsViewController.swift; sourceTree = "<group>"; };
 		A030AF25252E3D0A00487696 /* Mock.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mock.generated.swift; sourceTree = "<group>"; };
 		A030AF80252E4A0100487696 /* UIViewController+MakeFromStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+MakeFromStoryboard.swift"; sourceTree = "<group>"; };
+		A09D29982533B9B5001B05C1 /* StopDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopDetails.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +145,7 @@
 				A019C73F2533755F008F7644 /* TripsRemoteServiceApi.swift */,
 				A019C74325337565008F7644 /* TripsRemoteService.swift */,
 				A019C75C253376B0008F7644 /* Endpoint+Trips.swift */,
+				A019C7ED2533B80A008F7644 /* Endpoint+StopDetails.swift */,
 			);
 			path = Remote;
 			sourceTree = "<group>";
@@ -145,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				A019C74F253375C7008F7644 /* TripCodable.swift */,
+				A019C7F12533B85C008F7644 /* StopCodable.swift */,
 			);
 			path = Codable;
 			sourceTree = "<group>";
@@ -313,6 +323,7 @@
 			children = (
 				A019C7AC25337B5F008F7644 /* Trip.swift */,
 				A019C7B025337BC7008F7644 /* Location.swift */,
+				A019C7F52533B8A7008F7644 /* Stop.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -327,6 +338,7 @@
 				A019C7CB25339309008F7644 /* TripCell.swift */,
 				A019C7CF25339F74008F7644 /* TripDetails.swift */,
 				A019C7DE2533AF51008F7644 /* TripMapDetails.swift */,
+				A09D29982533B9B5001B05C1 /* StopDetails.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -487,6 +499,7 @@
 			files = (
 				A019C7CC25339309008F7644 /* TripCell.swift in Sources */,
 				A019C7AD25337B5F008F7644 /* Trip.swift in Sources */,
+				A019C7EE2533B80A008F7644 /* Endpoint+StopDetails.swift in Sources */,
 				A019C75D253376B0008F7644 /* Endpoint+Trips.swift in Sources */,
 				A019C77F25337987008F7644 /* APIClientLoggerApi.swift in Sources */,
 				A030AF17252E381600487696 /* TripsViewController.swift in Sources */,
@@ -494,6 +507,7 @@
 				A019C7DF2533AF51008F7644 /* TripMapDetails.swift in Sources */,
 				A030AF0B252E378500487696 /* TripsViewModel.swift in Sources */,
 				A019C7B525337F63008F7644 /* Configuration.swift in Sources */,
+				A09D29992533B9B5001B05C1 /* StopDetails.swift in Sources */,
 				A019C7C825338E90008F7644 /* NilOnFail.swift in Sources */,
 				A019C74425337565008F7644 /* TripsRemoteService.swift in Sources */,
 				A030AEAF252E2D5500487696 /* AppDelegate.swift in Sources */,
@@ -512,6 +526,8 @@
 				A030AF07252E369200487696 /* DependencyContainer.swift in Sources */,
 				A019C73C25337546008F7644 /* TripsRepository.swift in Sources */,
 				A019C7EA2533B24D008F7644 /* MKMapView+ClearOverlays.swift in Sources */,
+				A019C7F22533B85C008F7644 /* StopCodable.swift in Sources */,
+				A019C7F62533B8A7008F7644 /* Stop.swift in Sources */,
 				A030AF00252E35FA00487696 /* UIViewController+Child.swift in Sources */,
 				A019C788253379D1008F7644 /* URLRequest+cURLString.swift in Sources */,
 				A030AF81252E4A0100487696 /* UIViewController+MakeFromStoryboard.swift in Sources */,

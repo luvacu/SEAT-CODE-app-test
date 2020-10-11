@@ -66,13 +66,20 @@ private extension TripsViewController {
 
         tableView.rx.itemSelected
             .subscribe(onNext: { [weak self] indexPath in
-                self?.viewModel.selectTripIndex.accept(indexPath.row)
+                self?.viewModel.didSelectTripIndex.accept(indexPath.row)
             })
             .disposed(by: disposeBag)
 
         viewModel.selectedTripMapDetails
             .drive { [weak self] tripMapDetails in
                 self?.showTripInMap(tripMapDetails)
+            }
+            .disposed(by: disposeBag)
+
+        viewModel.selectedStopDetails
+            .observeOn(MainScheduler.instance)
+            .subscribe { [weak self] stopDetails in
+                self?.showPopup(message: stopDetails.description)
             }
             .disposed(by: disposeBag)
     }
@@ -85,6 +92,12 @@ private extension TripsViewController {
             mapView.addOverlay(polyline, level: .aboveRoads)
         }
     }
+
+    func showPopup(message: String) {
+        let alert = UIAlertController(title: "Stop", message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        present(alert, animated: true)
+    }
 }
 
 extension TripsViewController: MKMapViewDelegate {
@@ -96,5 +109,13 @@ extension TripsViewController: MKMapViewDelegate {
         renderer.strokeColor = .red
         renderer.lineWidth = 3
         return renderer
+    }
+
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+        guard let locationAnnotation = view.annotation as? LocationAnnotation,
+              let stopId = locationAnnotation.stopId else {
+            return
+        }
+        viewModel.didSelectStopId.accept(stopId)
     }
 }

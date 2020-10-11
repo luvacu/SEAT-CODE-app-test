@@ -11,4 +11,5 @@ import RxSwift
 // sourcery: AutoMockable
 protocol TripsRepositoryApi {
     func trips() -> Single<[Trip]>
+    func stopDetails(id: Int) -> Single<Stop>
 }

@@ -21,4 +21,9 @@ extension TripsRepository: TripsRepositoryApi {
         remote.trips()
             .map { $0.map { $0.toDomain() } }
     }
+
+    func stopDetails(id: Int) -> Single<Stop> {
+        remote.stopDetails(id: id)
+            .map { $0.toDomain() }
+    }
 }
