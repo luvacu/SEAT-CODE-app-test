@@ -6,10 +6,11 @@
 //
 
 import UIKit
+import RxSwift
 
 final class AppFlowController: UIViewController {
     private let container: DependencyContainer
-
+    private let disposeBag = DisposeBag()
     private let embeddedNavigationController: UINavigationController = {
         let navigationController = UINavigationController()
         return navigationController
@@ -40,5 +41,18 @@ private extension AppFlowController {
         let viewModel = TripsViewModel(repository: container.resolve(TripsRepositoryApi.self))
         let viewController = TripsViewController.make(viewModel: viewModel)
         embeddedNavigationController.viewControllers = [viewController]
+
+        viewModel.didTapReportButton
+            .subscribe { [weak self] _ in
+                self?.showContactForm()
+            }
+            .disposed(by: disposeBag)
+    }
+
+    func showContactForm() {
+        let viewModel = ContactFormViewModel()
+        let viewController = ContactFormViewController.make(viewModel: viewModel)
+        embeddedNavigationController.present(UINavigationController(rootViewController: viewController),
+                                             animated: true)
     }
 }

@@ -17,4 +17,5 @@ protocol TripsViewModelApi {
     var selectedStopDetails: Observable<StopDetails> { get }
     var didSelectTripIndex: PublishRelay<Int> { get }
     var didSelectStopId: PublishRelay<Int> { get }
+    var didTapReportButton: PublishRelay<Void> { get }
 }

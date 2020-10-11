@@ -16,10 +16,7 @@ final class TripsViewController: UIViewController {
             mapView.delegate = self
         }
     }
-    @IBOutlet private var tableView: UITableView! {
-        didSet {
-        }
-    }
+    @IBOutlet private var tableView: UITableView!
     @IBOutlet private var activityIndicator: UIActivityIndicatorView!
     private let disposeBag = DisposeBag()
     private let viewModel: TripsViewModelApi
@@ -35,6 +32,7 @@ final class TripsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupNavigationBar()
         setupBinding()
     }
 }
@@ -48,11 +46,19 @@ extension TripsViewController {
 }
 
 private extension TripsViewController {
+    func setupNavigationBar() {
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "exclamationmark.bubble"),
+                                                            style: .plain,
+                                                            target: nil,
+                                                            action: nil)
+        navigationItem.rightBarButtonItem?.rx.tap
+            .bind(to: viewModel.didTapReportButton)
+            .disposed(by: disposeBag)
+    }
+
     func setupBinding() {
         viewModel.title
-            .drive { [weak self] title in
-                self?.title = title
-            }
+            .drive(rx.title)
             .disposed(by: disposeBag)
 
         viewModel.trips
@@ -65,9 +71,8 @@ private extension TripsViewController {
             .disposed(by: disposeBag)
 
         tableView.rx.itemSelected
-            .subscribe(onNext: { [weak self] indexPath in
-                self?.viewModel.didSelectTripIndex.accept(indexPath.row)
-            })
+            .map { $0.row }
+            .bind(to: viewModel.didSelectTripIndex)
             .disposed(by: disposeBag)
 
         viewModel.selectedTripMapDetails

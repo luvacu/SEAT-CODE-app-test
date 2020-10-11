@@ -12,6 +12,7 @@ import RxCocoa
 struct TripsViewModel {
     private let selectedTripRelay = PublishRelay<Int>()
     private let selectedStopIdRelay = PublishRelay<Int>()
+    private let onReportButtonTapped = PublishRelay<Void>()
     private let currentTrips = BehaviorRelay<[Trip]>(value: [])
     private let repository: TripsRepositoryApi
 
@@ -61,5 +62,9 @@ extension TripsViewModel: TripsViewModelApi {
 
     var didSelectStopId: PublishRelay<Int> {
         selectedStopIdRelay
+    }
+
+    var didTapReportButton: PublishRelay<Void> {
+        onReportButtonTapped
     }
 }

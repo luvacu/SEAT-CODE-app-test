@@ -53,6 +53,10 @@
 		A030AF3F252E3EDF00487696 /* SwiftyMocky in Frameworks */ = {isa = PBXBuildFile; productRef = A030AF3E252E3EDF00487696 /* SwiftyMocky */; };
 		A030AF81252E4A0100487696 /* UIViewController+MakeFromStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A030AF80252E4A0100487696 /* UIViewController+MakeFromStoryboard.swift */; };
 		A09D29992533B9B5001B05C1 /* StopDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09D29982533B9B5001B05C1 /* StopDetails.swift */; };
+		A09D29A02533C4DD001B05C1 /* ContactFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09D299F2533C4DD001B05C1 /* ContactFormViewModel.swift */; };
+		A09D29A42533C4E9001B05C1 /* ContactFormViewModelApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09D29A32533C4E9001B05C1 /* ContactFormViewModelApi.swift */; };
+		A09D29A82533C4FD001B05C1 /* ContactFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09D29A72533C4FD001B05C1 /* ContactFormViewController.swift */; };
+		A09D29AC2533C514001B05C1 /* ContactFormViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A09D29AB2533C514001B05C1 /* ContactFormViewController.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,6 +116,10 @@
 		A030AF25252E3D0A00487696 /* Mock.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mock.generated.swift; sourceTree = "<group>"; };
 		A030AF80252E4A0100487696 /* UIViewController+MakeFromStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+MakeFromStoryboard.swift"; sourceTree = "<group>"; };
 		A09D29982533B9B5001B05C1 /* StopDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopDetails.swift; sourceTree = "<group>"; };
+		A09D299F2533C4DD001B05C1 /* ContactFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactFormViewModel.swift; sourceTree = "<group>"; };
+		A09D29A32533C4E9001B05C1 /* ContactFormViewModelApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactFormViewModelApi.swift; sourceTree = "<group>"; };
+		A09D29A72533C4FD001B05C1 /* ContactFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactFormViewController.swift; sourceTree = "<group>"; };
+		A09D29AB2533C514001B05C1 /* ContactFormViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ContactFormViewController.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -235,6 +243,7 @@
 				A030AEF1252E34C400487696 /* Application */,
 				A030AEF2252E34CF00487696 /* Extensions */,
 				A030AEF4252E353500487696 /* Trips */,
+				A09D299C2533C431001B05C1 /* Contact */,
 				A019C77825337976008F7644 /* Networking */,
 			);
 			path = Sources;
@@ -359,6 +368,25 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		A09D299C2533C431001B05C1 /* Contact */ = {
+			isa = PBXGroup;
+			children = (
+				A09D299D2533C4BE001B05C1 /* Presentation */,
+			);
+			path = Contact;
+			sourceTree = "<group>";
+		};
+		A09D299D2533C4BE001B05C1 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				A09D299F2533C4DD001B05C1 /* ContactFormViewModel.swift */,
+				A09D29A32533C4E9001B05C1 /* ContactFormViewModelApi.swift */,
+				A09D29A72533C4FD001B05C1 /* ContactFormViewController.swift */,
+				A09D29AB2533C514001B05C1 /* ContactFormViewController.storyboard */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -458,6 +486,7 @@
 			files = (
 				A030AEBB252E2D5700487696 /* LaunchScreen.storyboard in Resources */,
 				A030AF13252E37FA00487696 /* TripsViewController.storyboard in Resources */,
+				A09D29AC2533C514001B05C1 /* ContactFormViewController.storyboard in Resources */,
 				A030AEB8252E2D5700487696 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -499,6 +528,8 @@
 			files = (
 				A019C7CC25339309008F7644 /* TripCell.swift in Sources */,
 				A019C7AD25337B5F008F7644 /* Trip.swift in Sources */,
+				A09D29A82533C4FD001B05C1 /* ContactFormViewController.swift in Sources */,
+				A09D29A42533C4E9001B05C1 /* ContactFormViewModelApi.swift in Sources */,
 				A019C7EE2533B80A008F7644 /* Endpoint+StopDetails.swift in Sources */,
 				A019C75D253376B0008F7644 /* Endpoint+Trips.swift in Sources */,
 				A019C77F25337987008F7644 /* APIClientLoggerApi.swift in Sources */,
@@ -509,6 +540,7 @@
 				A019C7B525337F63008F7644 /* Configuration.swift in Sources */,
 				A09D29992533B9B5001B05C1 /* StopDetails.swift in Sources */,
 				A019C7C825338E90008F7644 /* NilOnFail.swift in Sources */,
+				A09D29A02533C4DD001B05C1 /* ContactFormViewModel.swift in Sources */,
 				A019C74425337565008F7644 /* TripsRemoteService.swift in Sources */,
 				A030AEAF252E2D5500487696 /* AppDelegate.swift in Sources */,
 				A019C7382533753F008F7644 /* TripsRepositoryApi.swift in Sources */,
