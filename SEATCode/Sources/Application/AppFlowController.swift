@@ -37,7 +37,7 @@ final class AppFlowController: UIViewController {
 
 private extension AppFlowController {
     func showTrips() {
-        let viewModel = TripsViewModel()
+        let viewModel = TripsViewModel(repository: container.resolve(TripsRepositoryApi.self))
         let viewController = TripsViewController.make(viewModel: viewModel)
         embeddedNavigationController.viewControllers = [viewController]
     }

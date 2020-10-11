@@ -26,6 +26,10 @@
 		A019C7AD25337B5F008F7644 /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = A019C7AC25337B5F008F7644 /* Trip.swift */; };
 		A019C7B125337BC7008F7644 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = A019C7B025337BC7008F7644 /* Location.swift */; };
 		A019C7B525337F63008F7644 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = A019C7B425337F63008F7644 /* Configuration.swift */; };
+		A019C7C4253385D6008F7644 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A019C7C3253385D6008F7644 /* MapKit.framework */; };
+		A019C7C825338E90008F7644 /* NilOnFail.swift in Sources */ = {isa = PBXBuildFile; fileRef = A019C7C725338E90008F7644 /* NilOnFail.swift */; };
+		A019C7CC25339309008F7644 /* TripCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A019C7CB25339309008F7644 /* TripCell.swift */; };
+		A019C7D025339F74008F7644 /* TripDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = A019C7CF25339F74008F7644 /* TripDetails.swift */; };
 		A030AEAF252E2D5500487696 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A030AEAE252E2D5500487696 /* AppDelegate.swift */; };
 		A030AEB8252E2D5700487696 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A030AEB7252E2D5700487696 /* Assets.xcassets */; };
 		A030AEBB252E2D5700487696 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A030AEB9252E2D5700487696 /* LaunchScreen.storyboard */; };
@@ -72,6 +76,10 @@
 		A019C7B425337F63008F7644 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		A019C7BB2533804C008F7644 /* Development.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Development.xcconfig; sourceTree = "<group>"; };
 		A019C7BC2533805E008F7644 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
+		A019C7C3253385D6008F7644 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		A019C7C725338E90008F7644 /* NilOnFail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NilOnFail.swift; sourceTree = "<group>"; };
+		A019C7CB25339309008F7644 /* TripCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripCell.swift; sourceTree = "<group>"; };
+		A019C7CF25339F74008F7644 /* TripDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripDetails.swift; sourceTree = "<group>"; };
 		A030AEAB252E2D5500487696 /* SEATCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SEATCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A030AEAE252E2D5500487696 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A030AEB7252E2D5700487696 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -98,6 +106,7 @@
 			files = (
 				A019C75925337630008F7644 /* RxSwift in Frameworks */,
 				A019C75725337630008F7644 /* RxCocoa in Frameworks */,
+				A019C7C4253385D6008F7644 /* MapKit.framework in Frameworks */,
 				A030AEFB252E35A600487696 /* Swinject in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -142,6 +151,7 @@
 				A019C77D25337987008F7644 /* Endpoint.swift */,
 				A019C77C25337987008F7644 /* NoResult.swift */,
 				A019C787253379D1008F7644 /* URLRequest+cURLString.swift */,
+				A019C7C725338E90008F7644 /* NilOnFail.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -296,6 +306,8 @@
 				A030AF0E252E37DC00487696 /* TripsViewModelApi.swift */,
 				A030AF16252E381600487696 /* TripsViewController.swift */,
 				A030AF12252E37FA00487696 /* TripsViewController.storyboard */,
+				A019C7CB25339309008F7644 /* TripCell.swift */,
+				A019C7CF25339F74008F7644 /* TripDetails.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -311,6 +323,7 @@
 		A030AF34252E3E9000487696 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A019C7C3253385D6008F7644 /* MapKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -451,6 +464,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A019C7CC25339309008F7644 /* TripCell.swift in Sources */,
 				A019C7AD25337B5F008F7644 /* Trip.swift in Sources */,
 				A019C75D253376B0008F7644 /* Endpoint+Trips.swift in Sources */,
 				A019C77F25337987008F7644 /* APIClientLoggerApi.swift in Sources */,
@@ -458,11 +472,13 @@
 				A019C78425337987008F7644 /* APIClient.swift in Sources */,
 				A030AF0B252E378500487696 /* TripsViewModel.swift in Sources */,
 				A019C7B525337F63008F7644 /* Configuration.swift in Sources */,
+				A019C7C825338E90008F7644 /* NilOnFail.swift in Sources */,
 				A019C74425337565008F7644 /* TripsRemoteService.swift in Sources */,
 				A030AEAF252E2D5500487696 /* AppDelegate.swift in Sources */,
 				A019C7382533753F008F7644 /* TripsRepositoryApi.swift in Sources */,
 				A019C78225337987008F7644 /* NoResult.swift in Sources */,
 				A030AF0F252E37DC00487696 /* TripsViewModelApi.swift in Sources */,
+				A019C7D025339F74008F7644 /* TripDetails.swift in Sources */,
 				A030AEF6252E355700487696 /* AppFlowController.swift in Sources */,
 				A019C78025337987008F7644 /* APIClientLogger.swift in Sources */,
 				A019C750253375C7008F7644 /* TripCodable.swift in Sources */,

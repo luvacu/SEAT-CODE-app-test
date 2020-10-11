@@ -12,3 +12,4 @@ SEATCodeTests:
   import:
   - Foundation
   - RxSwift
+  - RxCocoa
