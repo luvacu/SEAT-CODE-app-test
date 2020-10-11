@@ -2,6 +2,15 @@
   "object": {
     "pins": [
       {
+        "package": "Polyline",
+        "repositoryURL": "https://github.com/raphaelmor/Polyline",
+        "state": {
+          "branch": null,
+          "revision": "011fbc1b0f27a3398bd0fb7c5e2cf5c62ae82717",
+          "version": "4.2.1"
+        }
+      },
+      {
         "package": "RxSwift",
         "repositoryURL": "https://github.com/ReactiveX/RxSwift",
         "state": {

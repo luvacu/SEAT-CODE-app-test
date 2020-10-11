@@ -20,6 +20,7 @@ Trips demo app for iPhone (iOS 14+).
 - [RxSwift + RxCocoa](https://github.com/ReactiveX/RxSwift)
 - [SwiftyMocky](https://github.com/MakeAWishFoundation/SwiftyMocky)
 - [Swinject](https://github.com/Swinject/Swinject)
+- [Polyline](https://github.com/raphaelmor/Polyline)
 
 ## Author
 Luis Valdés Cuesta

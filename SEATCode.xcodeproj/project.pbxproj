@@ -30,6 +30,7 @@
 		A019C7C825338E90008F7644 /* NilOnFail.swift in Sources */ = {isa = PBXBuildFile; fileRef = A019C7C725338E90008F7644 /* NilOnFail.swift */; };
 		A019C7CC25339309008F7644 /* TripCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A019C7CB25339309008F7644 /* TripCell.swift */; };
 		A019C7D025339F74008F7644 /* TripDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = A019C7CF25339F74008F7644 /* TripDetails.swift */; };
+		A019C7D92533AA5E008F7644 /* Polyline in Frameworks */ = {isa = PBXBuildFile; productRef = A019C7D82533AA5E008F7644 /* Polyline */; };
 		A030AEAF252E2D5500487696 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A030AEAE252E2D5500487696 /* AppDelegate.swift */; };
 		A030AEB8252E2D5700487696 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A030AEB7252E2D5700487696 /* Assets.xcassets */; };
 		A030AEBB252E2D5700487696 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A030AEB9252E2D5700487696 /* LaunchScreen.storyboard */; };
@@ -108,6 +109,7 @@
 				A019C75725337630008F7644 /* RxCocoa in Frameworks */,
 				A019C7C4253385D6008F7644 /* MapKit.framework in Frameworks */,
 				A030AEFB252E35A600487696 /* Swinject in Frameworks */,
+				A019C7D92533AA5E008F7644 /* Polyline in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,6 +350,7 @@
 				A030AEFA252E35A600487696 /* Swinject */,
 				A019C75625337630008F7644 /* RxCocoa */,
 				A019C75825337630008F7644 /* RxSwift */,
+				A019C7D82533AA5E008F7644 /* Polyline */,
 			);
 			productName = SEATCode;
 			productReference = A030AEAB252E2D5500487696 /* SEATCode.app */;
@@ -407,6 +410,7 @@
 				A030AEF9252E35A600487696 /* XCRemoteSwiftPackageReference "Swinject" */,
 				A030AF3D252E3EDF00487696 /* XCRemoteSwiftPackageReference "SwiftyMocky" */,
 				A019C75325337630008F7644 /* XCRemoteSwiftPackageReference "RxSwift" */,
+				A019C7D72533AA5E008F7644 /* XCRemoteSwiftPackageReference "Polyline" */,
 			);
 			productRefGroup = A030AEAC252E2D5500487696 /* Products */;
 			projectDirPath = "";
@@ -762,6 +766,14 @@
 				minimumVersion = 5.1.1;
 			};
 		};
+		A019C7D72533AA5E008F7644 /* XCRemoteSwiftPackageReference "Polyline" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/raphaelmor/Polyline";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.2.1;
+			};
+		};
 		A030AEF9252E35A600487696 /* XCRemoteSwiftPackageReference "Swinject" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Swinject/Swinject";
@@ -795,6 +807,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = A019C75325337630008F7644 /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxSwift;
+		};
+		A019C7D82533AA5E008F7644 /* Polyline */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A019C7D72533AA5E008F7644 /* XCRemoteSwiftPackageReference "Polyline" */;
+			productName = Polyline;
 		};
 		A030AEFA252E35A600487696 /* Swinject */ = {
 			isa = XCSwiftPackageProductDependency;
