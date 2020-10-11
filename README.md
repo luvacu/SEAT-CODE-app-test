@@ -17,6 +17,7 @@ Trips demo app for iPhone (iOS 14+).
 
 ## Tools/Libraries/SDKs used
 - Swift Package Manager (already integrated in Xcode 12.0+)
+- [RxSwift + RxCocoa](https://github.com/ReactiveX/RxSwift)
 - [SwiftyMocky](https://github.com/MakeAWishFoundation/SwiftyMocky)
 - [Swinject](https://github.com/Swinject/Swinject)
 

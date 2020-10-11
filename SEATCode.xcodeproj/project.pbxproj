@@ -19,6 +19,9 @@
 		A019C730253374BD008F7644 /* NoResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = A019C72A253374BD008F7644 /* NoResult.swift */; };
 		A019C731253374BD008F7644 /* APIClientLoggerApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = A019C72B253374BD008F7644 /* APIClientLoggerApi.swift */; };
 		A019C732253374BD008F7644 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A019C72C253374BD008F7644 /* Endpoint.swift */; };
+		A019C75525337630008F7644 /* RxTest in Frameworks */ = {isa = PBXBuildFile; productRef = A019C75425337630008F7644 /* RxTest */; };
+		A019C75725337630008F7644 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = A019C75625337630008F7644 /* RxCocoa */; };
+		A019C75925337630008F7644 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = A019C75825337630008F7644 /* RxSwift */; };
 		A030AEAF252E2D5500487696 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A030AEAE252E2D5500487696 /* AppDelegate.swift */; };
 		A030AEB8252E2D5700487696 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A030AEB7252E2D5700487696 /* Assets.xcassets */; };
 		A030AEBB252E2D5700487696 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A030AEB9252E2D5700487696 /* LaunchScreen.storyboard */; };
@@ -83,6 +86,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A019C75925337630008F7644 /* RxSwift in Frameworks */,
+				A019C75725337630008F7644 /* RxCocoa in Frameworks */,
 				A030AEFB252E35A600487696 /* Swinject in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -91,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A019C75525337630008F7644 /* RxTest in Frameworks */,
 				A030AF3F252E3EDF00487696 /* SwiftyMocky in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -304,6 +310,8 @@
 			name = SEATCode;
 			packageProductDependencies = (
 				A030AEFA252E35A600487696 /* Swinject */,
+				A019C75625337630008F7644 /* RxCocoa */,
+				A019C75825337630008F7644 /* RxSwift */,
 			);
 			productName = SEATCode;
 			productReference = A030AEAB252E2D5500487696 /* SEATCode.app */;
@@ -326,6 +334,7 @@
 			name = SEATCodeTests;
 			packageProductDependencies = (
 				A030AF3E252E3EDF00487696 /* SwiftyMocky */,
+				A019C75425337630008F7644 /* RxTest */,
 			);
 			productName = SEATCodeTests;
 			productReference = A030AEC1252E2D5700487696 /* SEATCodeTests.xctest */;
@@ -361,6 +370,7 @@
 			packageReferences = (
 				A030AEF9252E35A600487696 /* XCRemoteSwiftPackageReference "Swinject" */,
 				A030AF3D252E3EDF00487696 /* XCRemoteSwiftPackageReference "SwiftyMocky" */,
+				A019C75325337630008F7644 /* XCRemoteSwiftPackageReference "RxSwift" */,
 			);
 			productRefGroup = A030AEAC252E2D5500487696 /* Products */;
 			projectDirPath = "";
@@ -699,6 +709,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		A019C75325337630008F7644 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.1.1;
+			};
+		};
 		A030AEF9252E35A600487696 /* XCRemoteSwiftPackageReference "Swinject" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Swinject/Swinject";
@@ -718,6 +736,21 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		A019C75425337630008F7644 /* RxTest */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A019C75325337630008F7644 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxTest;
+		};
+		A019C75625337630008F7644 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A019C75325337630008F7644 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		A019C75825337630008F7644 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A019C75325337630008F7644 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
 		A030AEFA252E35A600487696 /* Swinject */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = A030AEF9252E35A600487696 /* XCRemoteSwiftPackageReference "Swinject" */;

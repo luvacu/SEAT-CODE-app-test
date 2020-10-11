@@ -11,3 +11,4 @@ SEATCodeTests:
   - SEATCode
   import:
   - Foundation
+  - RxSwift
