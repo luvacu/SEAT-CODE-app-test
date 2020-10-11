@@ -1,0 +1,11 @@
+//
+//  Development.xcconfig
+//  SEATCode
+//
+//  Created by Luis Valdés on 11/10/2020.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+API_BASE_URL = europe-west1-metropolis-fe-test.cloudfunctions.net

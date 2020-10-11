@@ -25,6 +25,7 @@
 		A019C788253379D1008F7644 /* URLRequest+cURLString.swift in Sources */ = {isa = PBXBuildFile; fileRef = A019C787253379D1008F7644 /* URLRequest+cURLString.swift */; };
 		A019C7AD25337B5F008F7644 /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = A019C7AC25337B5F008F7644 /* Trip.swift */; };
 		A019C7B125337BC7008F7644 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = A019C7B025337BC7008F7644 /* Location.swift */; };
+		A019C7B525337F63008F7644 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = A019C7B425337F63008F7644 /* Configuration.swift */; };
 		A030AEAF252E2D5500487696 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A030AEAE252E2D5500487696 /* AppDelegate.swift */; };
 		A030AEB8252E2D5700487696 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A030AEB7252E2D5700487696 /* Assets.xcassets */; };
 		A030AEBB252E2D5700487696 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A030AEB9252E2D5700487696 /* LaunchScreen.storyboard */; };
@@ -68,6 +69,9 @@
 		A019C787253379D1008F7644 /* URLRequest+cURLString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URLRequest+cURLString.swift"; sourceTree = "<group>"; };
 		A019C7AC25337B5F008F7644 /* Trip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
 		A019C7B025337BC7008F7644 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		A019C7B425337F63008F7644 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		A019C7BB2533804C008F7644 /* Development.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Development.xcconfig; sourceTree = "<group>"; };
+		A019C7BC2533805E008F7644 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		A030AEAB252E2D5500487696 /* SEATCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SEATCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A030AEAE252E2D5500487696 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A030AEB7252E2D5700487696 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -142,6 +146,15 @@
 			path = Networking;
 			sourceTree = "<group>";
 		};
+		A019C7BA25338030008F7644 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				A019C7BB2533804C008F7644 /* Development.xcconfig */,
+				A019C7BC2533805E008F7644 /* Release.xcconfig */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
 		A030AEA2252E2D5500487696 = {
 			isa = PBXGroup;
 			children = (
@@ -193,6 +206,7 @@
 		A030AEE4252E2E3400487696 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A019C7BA25338030008F7644 /* Configuration */,
 				A030AEB7252E2D5700487696 /* Assets.xcassets */,
 				A030AEB9252E2D5700487696 /* LaunchScreen.storyboard */,
 				A030AEBC252E2D5700487696 /* Info.plist */,
@@ -222,6 +236,7 @@
 			children = (
 				A030AEAE252E2D5500487696 /* AppDelegate.swift */,
 				A030AEF5252E355700487696 /* AppFlowController.swift */,
+				A019C7B425337F63008F7644 /* Configuration.swift */,
 				A030AF06252E369200487696 /* DependencyContainer.swift */,
 			);
 			path = Application;
@@ -442,6 +457,7 @@
 				A030AF17252E381600487696 /* TripsViewController.swift in Sources */,
 				A019C78425337987008F7644 /* APIClient.swift in Sources */,
 				A030AF0B252E378500487696 /* TripsViewModel.swift in Sources */,
+				A019C7B525337F63008F7644 /* Configuration.swift in Sources */,
 				A019C74425337565008F7644 /* TripsRemoteService.swift in Sources */,
 				A030AEAF252E2D5500487696 /* AppDelegate.swift in Sources */,
 				A019C7382533753F008F7644 /* TripsRepositoryApi.swift in Sources */,
@@ -495,6 +511,7 @@
 /* Begin XCBuildConfiguration section */
 		A030AED3252E2D5700487696 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A019C7BB2533804C008F7644 /* Development.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -556,6 +573,7 @@
 		};
 		A030AED4252E2D5700487696 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A019C7BC2533805E008F7644 /* Release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
