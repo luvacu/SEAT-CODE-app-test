@@ -12,9 +12,6 @@
 		A019C7402533755F008F7644 /* TripsRemoteServiceApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = A019C73F2533755F008F7644 /* TripsRemoteServiceApi.swift */; };
 		A019C74425337565008F7644 /* TripsRemoteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A019C74325337565008F7644 /* TripsRemoteService.swift */; };
 		A019C750253375C7008F7644 /* TripCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A019C74F253375C7008F7644 /* TripCodable.swift */; };
-		A019C75525337630008F7644 /* RxTest in Frameworks */ = {isa = PBXBuildFile; productRef = A019C75425337630008F7644 /* RxTest */; };
-		A019C75725337630008F7644 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = A019C75625337630008F7644 /* RxCocoa */; };
-		A019C75925337630008F7644 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = A019C75825337630008F7644 /* RxSwift */; };
 		A019C75D253376B0008F7644 /* Endpoint+Trips.swift in Sources */ = {isa = PBXBuildFile; fileRef = A019C75C253376B0008F7644 /* Endpoint+Trips.swift */; };
 		A019C77F25337987008F7644 /* APIClientLoggerApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = A019C77925337987008F7644 /* APIClientLoggerApi.swift */; };
 		A019C78025337987008F7644 /* APIClientLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = A019C77A25337987008F7644 /* APIClientLogger.swift */; };
@@ -57,8 +54,19 @@
 		A09D29A42533C4E9001B05C1 /* ContactFormViewModelApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09D29A32533C4E9001B05C1 /* ContactFormViewModelApi.swift */; };
 		A09D29A82533C4FD001B05C1 /* ContactFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09D29A72533C4FD001B05C1 /* ContactFormViewController.swift */; };
 		A09D29AC2533C514001B05C1 /* ContactFormViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A09D29AB2533C514001B05C1 /* ContactFormViewController.storyboard */; };
+		A09D29B32533E27E001B05C1 /* Issue.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09D29B22533E27E001B05C1 /* Issue.swift */; };
+		A09D29B72533E2CD001B05C1 /* IssuesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09D29B62533E2CD001B05C1 /* IssuesRepository.swift */; };
+		A09D29BB2533E2D4001B05C1 /* IssuesRepositoryApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09D29BA2533E2D4001B05C1 /* IssuesRepositoryApi.swift */; };
+		A09D29BF2533E323001B05C1 /* IssuesLocalServiceApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09D29BE2533E323001B05C1 /* IssuesLocalServiceApi.swift */; };
+		A09D29C32533E328001B05C1 /* IssuesLocalService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09D29C22533E328001B05C1 /* IssuesLocalService.swift */; };
 		A09D29C82533E52B001B05C1 /* String+Matches.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09D29C72533E52B001B05C1 /* String+Matches.swift */; };
 		A09D29CC2533E543001B05C1 /* String+Validations.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09D29CB2533E543001B05C1 /* String+Validations.swift */; };
+		A09D29D12533E808001B05C1 /* IssueCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09D29D02533E808001B05C1 /* IssueCodable.swift */; };
+		A09D29D72533F036001B05C1 /* NotificationServiceApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09D29D62533F036001B05C1 /* NotificationServiceApi.swift */; };
+		A09D29DC2533F093001B05C1 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09D29DB2533F093001B05C1 /* NotificationService.swift */; };
+		A09D29E52533FC97001B05C1 /* RxTest in Frameworks */ = {isa = PBXBuildFile; productRef = A09D29E42533FC97001B05C1 /* RxTest */; };
+		A09D29E72533FC97001B05C1 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = A09D29E62533FC97001B05C1 /* RxCocoa */; };
+		A09D29E92533FC97001B05C1 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = A09D29E82533FC97001B05C1 /* RxSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -122,8 +130,16 @@
 		A09D29A32533C4E9001B05C1 /* ContactFormViewModelApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactFormViewModelApi.swift; sourceTree = "<group>"; };
 		A09D29A72533C4FD001B05C1 /* ContactFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactFormViewController.swift; sourceTree = "<group>"; };
 		A09D29AB2533C514001B05C1 /* ContactFormViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ContactFormViewController.storyboard; sourceTree = "<group>"; };
+		A09D29B22533E27E001B05C1 /* Issue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Issue.swift; sourceTree = "<group>"; };
+		A09D29B62533E2CD001B05C1 /* IssuesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssuesRepository.swift; sourceTree = "<group>"; };
+		A09D29BA2533E2D4001B05C1 /* IssuesRepositoryApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssuesRepositoryApi.swift; sourceTree = "<group>"; };
+		A09D29BE2533E323001B05C1 /* IssuesLocalServiceApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssuesLocalServiceApi.swift; sourceTree = "<group>"; };
+		A09D29C22533E328001B05C1 /* IssuesLocalService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssuesLocalService.swift; sourceTree = "<group>"; };
 		A09D29C72533E52B001B05C1 /* String+Matches.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Matches.swift"; sourceTree = "<group>"; };
 		A09D29CB2533E543001B05C1 /* String+Validations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Validations.swift"; sourceTree = "<group>"; };
+		A09D29D02533E808001B05C1 /* IssueCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueCodable.swift; sourceTree = "<group>"; };
+		A09D29D62533F036001B05C1 /* NotificationServiceApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationServiceApi.swift; sourceTree = "<group>"; };
+		A09D29DB2533F093001B05C1 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,10 +147,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A019C75925337630008F7644 /* RxSwift in Frameworks */,
-				A019C75725337630008F7644 /* RxCocoa in Frameworks */,
 				A019C7C4253385D6008F7644 /* MapKit.framework in Frameworks */,
 				A030AEFB252E35A600487696 /* Swinject in Frameworks */,
+				A09D29E92533FC97001B05C1 /* RxSwift in Frameworks */,
+				A09D29E72533FC97001B05C1 /* RxCocoa in Frameworks */,
 				A019C7D92533AA5E008F7644 /* Polyline in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -143,7 +159,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A019C75525337630008F7644 /* RxTest in Frameworks */,
+				A09D29E52533FC97001B05C1 /* RxTest in Frameworks */,
 				A030AF3F252E3EDF00487696 /* SwiftyMocky in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -376,6 +392,8 @@
 		A09D299C2533C431001B05C1 /* Contact */ = {
 			isa = PBXGroup;
 			children = (
+				A09D29B02533E267001B05C1 /* Data */,
+				A09D29AF2533E261001B05C1 /* Domain */,
 				A09D299D2533C4BE001B05C1 /* Presentation */,
 			);
 			path = Contact;
@@ -392,6 +410,36 @@
 			path = Presentation;
 			sourceTree = "<group>";
 		};
+		A09D29AF2533E261001B05C1 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				A09D29B22533E27E001B05C1 /* Issue.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		A09D29B02533E267001B05C1 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				A09D29CF2533E7FF001B05C1 /* Codable */,
+				A09D29B12533E26D001B05C1 /* Local */,
+				A09D29BA2533E2D4001B05C1 /* IssuesRepositoryApi.swift */,
+				A09D29B62533E2CD001B05C1 /* IssuesRepository.swift */,
+				A09D29D62533F036001B05C1 /* NotificationServiceApi.swift */,
+				A09D29DB2533F093001B05C1 /* NotificationService.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		A09D29B12533E26D001B05C1 /* Local */ = {
+			isa = PBXGroup;
+			children = (
+				A09D29BE2533E323001B05C1 /* IssuesLocalServiceApi.swift */,
+				A09D29C22533E328001B05C1 /* IssuesLocalService.swift */,
+			);
+			path = Local;
+			sourceTree = "<group>";
+		};
 		A09D29C62533E516001B05C1 /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
@@ -399,6 +447,14 @@
 				A09D29CB2533E543001B05C1 /* String+Validations.swift */,
 			);
 			path = Foundation;
+			sourceTree = "<group>";
+		};
+		A09D29CF2533E7FF001B05C1 /* Codable */ = {
+			isa = PBXGroup;
+			children = (
+				A09D29D02533E808001B05C1 /* IssueCodable.swift */,
+			);
+			path = Codable;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -419,9 +475,9 @@
 			name = SEATCode;
 			packageProductDependencies = (
 				A030AEFA252E35A600487696 /* Swinject */,
-				A019C75625337630008F7644 /* RxCocoa */,
-				A019C75825337630008F7644 /* RxSwift */,
 				A019C7D82533AA5E008F7644 /* Polyline */,
+				A09D29E62533FC97001B05C1 /* RxCocoa */,
+				A09D29E82533FC97001B05C1 /* RxSwift */,
 			);
 			productName = SEATCode;
 			productReference = A030AEAB252E2D5500487696 /* SEATCode.app */;
@@ -444,7 +500,7 @@
 			name = SEATCodeTests;
 			packageProductDependencies = (
 				A030AF3E252E3EDF00487696 /* SwiftyMocky */,
-				A019C75425337630008F7644 /* RxTest */,
+				A09D29E42533FC97001B05C1 /* RxTest */,
 			);
 			productName = SEATCodeTests;
 			productReference = A030AEC1252E2D5700487696 /* SEATCodeTests.xctest */;
@@ -480,8 +536,8 @@
 			packageReferences = (
 				A030AEF9252E35A600487696 /* XCRemoteSwiftPackageReference "Swinject" */,
 				A030AF3D252E3EDF00487696 /* XCRemoteSwiftPackageReference "SwiftyMocky" */,
-				A019C75325337630008F7644 /* XCRemoteSwiftPackageReference "RxSwift" */,
 				A019C7D72533AA5E008F7644 /* XCRemoteSwiftPackageReference "Polyline" */,
+				A09D29E32533FC97001B05C1 /* XCRemoteSwiftPackageReference "RxSwift" */,
 			);
 			productRefGroup = A030AEAC252E2D5500487696 /* Products */;
 			projectDirPath = "";
@@ -543,6 +599,9 @@
 				A019C7CC25339309008F7644 /* TripCell.swift in Sources */,
 				A019C7AD25337B5F008F7644 /* Trip.swift in Sources */,
 				A09D29A82533C4FD001B05C1 /* ContactFormViewController.swift in Sources */,
+				A09D29BF2533E323001B05C1 /* IssuesLocalServiceApi.swift in Sources */,
+				A09D29B72533E2CD001B05C1 /* IssuesRepository.swift in Sources */,
+				A09D29B32533E27E001B05C1 /* Issue.swift in Sources */,
 				A09D29A42533C4E9001B05C1 /* ContactFormViewModelApi.swift in Sources */,
 				A019C7EE2533B80A008F7644 /* Endpoint+StopDetails.swift in Sources */,
 				A019C75D253376B0008F7644 /* Endpoint+Trips.swift in Sources */,
@@ -558,7 +617,10 @@
 				A019C7C825338E90008F7644 /* NilOnFail.swift in Sources */,
 				A09D29A02533C4DD001B05C1 /* ContactFormViewModel.swift in Sources */,
 				A019C74425337565008F7644 /* TripsRemoteService.swift in Sources */,
+				A09D29D72533F036001B05C1 /* NotificationServiceApi.swift in Sources */,
+				A09D29C32533E328001B05C1 /* IssuesLocalService.swift in Sources */,
 				A030AEAF252E2D5500487696 /* AppDelegate.swift in Sources */,
+				A09D29DC2533F093001B05C1 /* NotificationService.swift in Sources */,
 				A019C7382533753F008F7644 /* TripsRepositoryApi.swift in Sources */,
 				A019C78225337987008F7644 /* NoResult.swift in Sources */,
 				A030AF0F252E37DC00487696 /* TripsViewModelApi.swift in Sources */,
@@ -568,12 +630,14 @@
 				A019C750253375C7008F7644 /* TripCodable.swift in Sources */,
 				A019C7B125337BC7008F7644 /* Location.swift in Sources */,
 				A019C78325337987008F7644 /* Endpoint.swift in Sources */,
+				A09D29D12533E808001B05C1 /* IssueCodable.swift in Sources */,
 				A019C7402533755F008F7644 /* TripsRemoteServiceApi.swift in Sources */,
 				A019C78125337987008F7644 /* APIClientApi.swift in Sources */,
 				A019C7E42533B01E008F7644 /* MKMapView+ClearAnnotations.swift in Sources */,
 				A030AF07252E369200487696 /* DependencyContainer.swift in Sources */,
 				A019C73C25337546008F7644 /* TripsRepository.swift in Sources */,
 				A019C7EA2533B24D008F7644 /* MKMapView+ClearOverlays.swift in Sources */,
+				A09D29BB2533E2D4001B05C1 /* IssuesRepositoryApi.swift in Sources */,
 				A019C7F22533B85C008F7644 /* StopCodable.swift in Sources */,
 				A019C7F62533B8A7008F7644 /* Stop.swift in Sources */,
 				A030AF00252E35FA00487696 /* UIViewController+Child.swift in Sources */,
@@ -842,14 +906,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		A019C75325337630008F7644 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/ReactiveX/RxSwift";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.1.1;
-			};
-		};
 		A019C7D72533AA5E008F7644 /* XCRemoteSwiftPackageReference "Polyline" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/raphaelmor/Polyline";
@@ -874,24 +930,17 @@
 				minimumVersion = 4.0.1;
 			};
 		};
+		A09D29E32533FC97001B05C1 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.1.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		A019C75425337630008F7644 /* RxTest */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = A019C75325337630008F7644 /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxTest;
-		};
-		A019C75625337630008F7644 /* RxCocoa */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = A019C75325337630008F7644 /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxCocoa;
-		};
-		A019C75825337630008F7644 /* RxSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = A019C75325337630008F7644 /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxSwift;
-		};
 		A019C7D82533AA5E008F7644 /* Polyline */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = A019C7D72533AA5E008F7644 /* XCRemoteSwiftPackageReference "Polyline" */;
@@ -906,6 +955,21 @@
 			isa = XCSwiftPackageProductDependency;
 			package = A030AF3D252E3EDF00487696 /* XCRemoteSwiftPackageReference "SwiftyMocky" */;
 			productName = SwiftyMocky;
+		};
+		A09D29E42533FC97001B05C1 /* RxTest */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A09D29E32533FC97001B05C1 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxTest;
+		};
+		A09D29E62533FC97001B05C1 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A09D29E32533FC97001B05C1 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		A09D29E82533FC97001B05C1 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A09D29E32533FC97001B05C1 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

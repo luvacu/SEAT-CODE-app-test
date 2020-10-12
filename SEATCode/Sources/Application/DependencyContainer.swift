@@ -6,6 +6,8 @@
 //
 
 import Foundation
+import UIKit
+import UserNotifications
 import Swinject
 
 struct DependencyContainer {
@@ -19,7 +21,6 @@ struct DependencyContainer {
         decoder.dateDecodingStrategy = .formatted(formatter)
         return decoder
     }()
-
 
     func resolve<T>(_ type: T.Type) -> T {
         if let instance = container.synchronize().resolve(type) {
@@ -56,9 +57,17 @@ private extension DependencyContainer {
         container.register(URLSessionConfiguration.self) { _ in
             URLSessionConfiguration.default
         }
-
         container.register(URLSession.self) {
             URLSession(configuration: $0.resolve(URLSessionConfiguration.self)!)
+        }
+        container.register(UserDefaults.self) { _ in
+            UserDefaults.standard
+        }
+        container.register(UIApplication.self) { _ in
+            UIApplication.shared
+        }
+        container.register(UNUserNotificationCenter.self) { _ in
+            UNUserNotificationCenter.current()
         }
     }
 
@@ -68,22 +77,31 @@ private extension DependencyContainer {
                 APIClientLogger()
             }
         #endif
-
         container.register(APIClientApi.self) {
             APIClient(baseURL: Configuration.baseURL,
                       session: $0.resolve(URLSession.self)!,
                       logger: $0.resolve(APIClientLoggerApi.self))
         }
-
         container.register(TripsRemoteServiceApi.self) {
             TripsRemoteService(apiClient: $0.resolve(APIClientApi.self)!,
                                jsonDecoder: jsonDecoder)
+        }
+        container.register(IssuesLocalServiceApi.self) {
+            IssuesLocalService(storage: $0.resolve(UserDefaults.self)!,
+                               jsonEncoder: JSONEncoder())
+        }
+        container.register(NotificationServiceApi.self) {
+            NotificationService(application: $0.resolve(UIApplication.self)!,
+                                userNotificationCenter: $0.resolve(UNUserNotificationCenter.self)!)
         }
     }
 
     func registerRepositories(_ container: Container) {
         container.register(TripsRepositoryApi.self) {
             TripsRepository(remote: $0.resolve(TripsRemoteServiceApi.self)!)
+        }
+        container.register(IssuesRepositoryApi.self) {
+            IssuesRepository(local: $0.resolve(IssuesLocalServiceApi.self)!)
         }
     }
 }

@@ -50,9 +50,16 @@ private extension AppFlowController {
     }
 
     func showContactForm() {
-        let viewModel = ContactFormViewModel()
+        let viewModel = ContactFormViewModel(repository: container.resolve(IssuesRepositoryApi.self),
+                                             notificationService: container.resolve(NotificationServiceApi.self))
         let viewController = ContactFormViewController.make(viewModel: viewModel)
         embeddedNavigationController.present(UINavigationController(rootViewController: viewController),
                                              animated: true)
+
+        viewModel.didTapSaveButton
+            .subscribe { _ in
+                viewController.dismiss(animated: true)
+            }
+            .disposed(by: disposeBag)
     }
 }
