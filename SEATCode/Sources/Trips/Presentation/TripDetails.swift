@@ -37,3 +37,5 @@ struct TripDetails {
         }()
     }
 }
+
+extension TripDetails: Equatable {}
