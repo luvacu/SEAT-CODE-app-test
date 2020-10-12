@@ -60,5 +60,24 @@ private extension ContactFormViewController {
         viewModel.isSaveButtonEnabled
             .drive(navigationItem.rightBarButtonItem!.rx.isEnabled)
             .disposed(by: disposeBag)
+
+        nameTextField.rx.text
+            .bind(to: viewModel.inputName)
+            .disposed(by: disposeBag)
+        surnameTextField.rx.text
+            .bind(to: viewModel.inputSurname)
+            .disposed(by: disposeBag)
+        emailTextField.rx.text
+            .bind(to: viewModel.inputEmail)
+            .disposed(by: disposeBag)
+        phoneTextField.rx.text
+            .bind(to: viewModel.inputPhoneNumber)
+            .disposed(by: disposeBag)
+        datePicker.rx.date
+            .bind(to: viewModel.inputDate)
+            .disposed(by: disposeBag)
+        descriptionTextView.rx.text
+            .bind(to: viewModel.inputDescription)
+            .disposed(by: disposeBag)
     }
 }

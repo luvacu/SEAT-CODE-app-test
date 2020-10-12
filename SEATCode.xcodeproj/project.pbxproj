@@ -57,6 +57,8 @@
 		A09D29A42533C4E9001B05C1 /* ContactFormViewModelApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09D29A32533C4E9001B05C1 /* ContactFormViewModelApi.swift */; };
 		A09D29A82533C4FD001B05C1 /* ContactFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09D29A72533C4FD001B05C1 /* ContactFormViewController.swift */; };
 		A09D29AC2533C514001B05C1 /* ContactFormViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A09D29AB2533C514001B05C1 /* ContactFormViewController.storyboard */; };
+		A09D29C82533E52B001B05C1 /* String+Matches.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09D29C72533E52B001B05C1 /* String+Matches.swift */; };
+		A09D29CC2533E543001B05C1 /* String+Validations.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09D29CB2533E543001B05C1 /* String+Validations.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -120,6 +122,8 @@
 		A09D29A32533C4E9001B05C1 /* ContactFormViewModelApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactFormViewModelApi.swift; sourceTree = "<group>"; };
 		A09D29A72533C4FD001B05C1 /* ContactFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactFormViewController.swift; sourceTree = "<group>"; };
 		A09D29AB2533C514001B05C1 /* ContactFormViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ContactFormViewController.storyboard; sourceTree = "<group>"; };
+		A09D29C72533E52B001B05C1 /* String+Matches.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Matches.swift"; sourceTree = "<group>"; };
+		A09D29CB2533E543001B05C1 /* String+Validations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Validations.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -291,6 +295,7 @@
 		A030AEF2252E34CF00487696 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				A09D29C62533E516001B05C1 /* Foundation */,
 				A019C7E22533B012008F7644 /* MapKit */,
 				A030AEFE252E35ED00487696 /* UIKit */,
 			);
@@ -385,6 +390,15 @@
 				A09D29AB2533C514001B05C1 /* ContactFormViewController.storyboard */,
 			);
 			path = Presentation;
+			sourceTree = "<group>";
+		};
+		A09D29C62533E516001B05C1 /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				A09D29C72533E52B001B05C1 /* String+Matches.swift */,
+				A09D29CB2533E543001B05C1 /* String+Validations.swift */,
+			);
+			path = Foundation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -532,7 +546,9 @@
 				A09D29A42533C4E9001B05C1 /* ContactFormViewModelApi.swift in Sources */,
 				A019C7EE2533B80A008F7644 /* Endpoint+StopDetails.swift in Sources */,
 				A019C75D253376B0008F7644 /* Endpoint+Trips.swift in Sources */,
+				A09D29C82533E52B001B05C1 /* String+Matches.swift in Sources */,
 				A019C77F25337987008F7644 /* APIClientLoggerApi.swift in Sources */,
+				A09D29CC2533E543001B05C1 /* String+Validations.swift in Sources */,
 				A030AF17252E381600487696 /* TripsViewController.swift in Sources */,
 				A019C78425337987008F7644 /* APIClient.swift in Sources */,
 				A019C7DF2533AF51008F7644 /* TripMapDetails.swift in Sources */,
